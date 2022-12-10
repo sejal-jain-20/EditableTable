@@ -104,30 +104,78 @@ function App() {
 
   return (
     <div className="App">
-      <Popup/>
+      <Popup />
       <TableContainer>
         <form onSubmit={handleEditFormSubmit}>
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Employee Name</TableCell>
-                <TableCell align="right">Employee DOB</TableCell>
-                <TableCell align="right">Employee Gender</TableCell>
-                <TableCell align="right">Actions</TableCell>
+                <TableCell
+                  align="center"
+                  style={{
+                    font: "600 1rem sans-serif",
+                    backgroundColor: "rgb(124, 207, 245)",
+                    border: "1px solid",
+                  }}
+                >
+                  S.No.
+                </TableCell>
+                <TableCell
+                  align="center"
+                  style={{
+                    font: "600 1rem sans-serif",
+                    backgroundColor: "rgb(124, 207, 245)",
+                    border: "1px solid",
+                  }}
+                >
+                  Employee Name
+                </TableCell>
+                <TableCell
+                  align="center"
+                  style={{
+                    font: "600 1rem sans-serif",
+                    backgroundColor: "rgb(124, 207, 245)",
+                    border: "1px solid",
+                  }}
+                >
+                  Employee DOB
+                </TableCell>
+                <TableCell
+                  align="center"
+                  style={{
+                    font: "600 1rem sans-serif",
+                    backgroundColor: "rgb(124, 207, 245)",
+                    border: "1px solid",
+                  }}
+                >
+                  Employee Gender
+                </TableCell>
+                <TableCell
+                  align="center"
+                  style={{
+                    font: "600 1rem sans-serif",
+                    backgroundColor: "rgb(124, 207, 245)",
+                    border: "1px solid",
+                  }}
+                >
+                  Actions
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {contacts.map((contact) => (
+              {contacts.map((contact,idx) => (
                 <>
                   {editContactId === contact.id ? (
                     <Editable
                       editFormData={editFormData}
+                      idx={idx+1}
                       handleEditFormChange={handleEditFormChange}
                       handleCancelClick={handleCancelClick}
                     />
                   ) : (
                     <ReadOnly
                       contact={contact}
+                      idx={idx+1}
                       handleEditClick={handleEditClick}
                       handleDeleteClick={handleDeleteClick}
                     />
@@ -154,7 +202,7 @@ function App() {
           required
           onChange={handleAddFormChange}
         />
-        <input
+        <input className="radio_b"
           type="radio"
           name="gender"
           value="Female"
@@ -162,7 +210,7 @@ function App() {
           onChange={handleAddFormChange}
         />
         <label>Female</label>
-        <input
+        <input className="radio_b"
           type="radio"
           name="gender"
           value="Male"
@@ -170,7 +218,8 @@ function App() {
           onChange={handleAddFormChange}
         />
         <label>Male</label>
-        <input
+
+        <input className="radio_b"
           type="radio"
           name="gender"
           value="Other"

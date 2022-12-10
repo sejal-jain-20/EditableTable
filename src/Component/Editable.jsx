@@ -1,11 +1,31 @@
 import React from "react";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
+import { border } from "@mui/system";
 
-const Editable = ({editFormData,handleEditFormChange,handleCancelClick}) => {
+const Editable = ({idx,editFormData,handleEditFormChange,handleCancelClick}) => {
   return (
     <TableRow>
-      <TableCell>
+      <TableCell
+        align="center"
+        style={{
+          font: "600 1rem sans-serif",
+          backgroundColor: "rgb(124, 207, 245, 0.3)",
+          border: "1px solid rgb(0,0,0,0.2)",
+          padding: "0",
+        }}
+      >
+        {`${idx}.`}
+      </TableCell>
+      <TableCell
+        align="center"
+        style={{
+          font: "600 1rem sans-serif",
+          backgroundColor: "rgb(124, 207, 245, 0.3)",
+          border: "1px solid rgb(0,0,0,0.2)",
+          padding: "0",
+        }}
+      >
         <input
           type="text"
           name="name"
@@ -15,7 +35,15 @@ const Editable = ({editFormData,handleEditFormChange,handleCancelClick}) => {
           onChange={handleEditFormChange}
         ></input>
       </TableCell>
-      <TableCell align="right">
+      <TableCell
+        align="center"
+        style={{
+          font: "600 1rem sans-serif",
+          backgroundColor: "rgb(124, 207, 245, 0.3)",
+          border: "1px solid rgb(0,0,0,0.2)",
+          padding: "0",
+        }}
+      >
         <input
           type="date"
           name="DOB"
@@ -25,7 +53,15 @@ const Editable = ({editFormData,handleEditFormChange,handleCancelClick}) => {
           onChange={handleEditFormChange}
         ></input>
       </TableCell>
-      <TableCell align="right">
+      <TableCell
+        align="center"
+        style={{
+          font: "600 1rem sans-serif",
+          backgroundColor: "rgb(124, 207, 245, 0.3)",
+          border: "1px solid rgb(0,0,0,0.2)",
+          padding: "0",
+        }}
+      >
         {" "}
         <input
           type="text"
@@ -35,25 +71,16 @@ const Editable = ({editFormData,handleEditFormChange,handleCancelClick}) => {
           required
           onChange={handleEditFormChange}
         />
-        {/* <label>Female</label>
-        <input
-          type="radio"
-          name="gender"
-          value={editFormData.gender}
-          required
-          onChange={handleEditFormChange}
-        />
-        <label>Male</label>
-        <input
-          type="radio"
-          name="gender"
-          value={editFormData.gender}
-          required
-          onChange={handleEditFormChange}
-        />
-        <label>Other</label> */}
       </TableCell>
-      <TableCell align="right">
+      <TableCell
+        align="center"
+        style={{
+          font: "600 1rem sans-serif",
+          backgroundColor: "rgb(124, 207, 245, 0.3)",
+          border: "1px solid rgb(0,0,0,0.2)",
+          padding: "0",
+        }}
+      >
         <button type="submit">Save</button>
         <button type="button" onClick={handleCancelClick}>
           Cancel

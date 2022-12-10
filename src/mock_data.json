@@ -1,34 +1,23 @@
 [
     {
       "id": 1,
-      "name": "Jenny Chan",
-      "DOB": "01-10-2000",
-      "gender": "Female"
+      "name": "ram",
+      "DOB": "2000-10-12",
+      "gender": "Male"
     
     },
     {
       "id": 2,
-      "name": "Jessica warren",
+      "name": "mohan",
       "DOB": "01-10-2000",
-      "gender": "Female"
+      "gender": "Male"
       
     },
     {
       "id": 3,
-      "name": "Tony Frank",
+      "name": "sneha",
       "DOB": "01-10-2000",
-      "gender": "Male"
-    },
-    {
-      "id": 4,
-      "name": "Jeremy Clark",
-      "DOB": "01-10-2000",
-      "gender": "Male"
-    },
-    {
-      "id": 5,
-      "name": "Raymond Edwards",
-      "DOB": "01-10-2000",
-      "gender": "Other"
+      "gender": "Female"
     }
+
   ]
